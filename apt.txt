@@ -1,0 +1,1 @@
+sudo apt install code krita gimp blender audacity godot3 inkscape -y
