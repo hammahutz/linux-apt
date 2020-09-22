@@ -1,1 +1,37 @@
-sudo apt install code krita gimp blender audacity godot3 inkscape -y
+//Init
+sudo apt install deja-dup
+sudo apt install gufw
+sudo apt install keepassxc
+sudo apt install code krita gimp blender audacity godot3 inkscape chromium discord p7zip-full -y
+
+//Lutris gaming
+sudo add-apt-repository ppa:lutris-team/lutris
+sudo apt update
+sudo apt install wine64 lutris dxvk steam-installer -y
+
+//Spotify
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+
+//Dotnet
+wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get update; \
+sudo apt-get install -y apt-transport-https && \
+sudo apt-get update && \
+sudo apt-get install -y dotnet-sdk-3.1
+
+//Mono
+sudo apt install apt-transport-https dirmngr gnupg ca-certificates
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb https://download.mono-project.com/repo/debian stable-buster main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt update
+sudo apt install -y mono-devel
+
+//Monogame
+dotnet new -i Monogame.Templates.CSharp
+ddotnet tool install --global dotnet-mgcb-editor
+mgcb-editor --register
+wget -qO- https://raw.githubusercontent.com/MonoGame/MonoGame/develop/Tools/MonoGame.Effect.Compiler/mgfxc_wine_setup.sh | bash
