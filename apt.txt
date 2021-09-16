@@ -2,7 +2,7 @@
 sudo apt install deja-dup
 sudo apt install gufw
 sudo apt install keepassxc
-sudo apt install code krita gimp blender audacity godot3 inkscape chromium discord p7zip-full -y
+sudo apt install code krita gimp blender audacity godot3 inkscape chromium discord lmms p7zip-full -y
 
 //Lutris gaming
 sudo add-apt-repository ppa:lutris-team/lutris
