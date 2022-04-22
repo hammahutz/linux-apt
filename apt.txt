@@ -22,6 +22,7 @@ sudo apt-get update; \
 sudo apt-get install -y apt-transport-https && \
 sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-3.1
+sudo apt-get install -y dotnet-sdk-5.0
 
 //Mono
 sudo apt install apt-transport-https dirmngr gnupg ca-certificates
